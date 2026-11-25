@@ -1,0 +1,188 @@
+{
+  "network": "studionet",
+  "repository": "gabrieladash123-bit/calibration-band",
+  "revision": "295ce396e01b7a80f97ae31d0a7adbef9c208651",
+  "source_sha256": "eed36edb8c9d74aa3a79a1ac020f01cf7cebab5c2f70fe5aea411a39737b0087",
+  "fit_id": "796451322beb30506eb9b9e0f8d293592ad3d42af73ef5c81d8ee2b40d8c5e04",
+  "transactions": [
+    {
+      "label": "deploy",
+      "sender": "0x81FBd01544FDCf99309b26BaD8397Be5DfADC90f",
+      "test_fee_deposit_wei": "25000000000002588",
+      "evm_hash": "0xf0e1901541e8e16cf78d20f2f7176decc260c321f02e383a2d9e3c827d645d3f",
+      "hash": "0xf0e1901541e8e16cf78d20f2f7176decc260c321f02e383a2d9e3c827d645d3f",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "agree": 3,
+      "votes": 5
+    },
+    {
+      "label": "fit-restoration",
+      "sender": "0x7A3a9B0A5440138D7874223dF69171d7C1f897C7",
+      "test_fee_deposit_wei": "125000000000002588",
+      "evm_hash": "0x6b7802f1c85b998ec7be9a7930dda72988df1ee98095aa58f1948de4e0e04b0b",
+      "hash": "0x6b7802f1c85b998ec7be9a7930dda72988df1ee98095aa58f1948de4e0e04b0b",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "agree": 3,
+      "votes": 5
+    },
+    {
+      "label": "reject-duplicate",
+      "sender": "0xBD2fb35BCD9d4a6ce93BDED47e6342a23B20c1f6",
+      "test_fee_deposit_wei": "25000000000002588",
+      "evm_hash": "0xabead56227bb31a683cbb24d621ff738e7532d554ec6280632933fcec20a0329",
+      "hash": "0xabead56227bb31a683cbb24d621ff738e7532d554ec6280632933fcec20a0329",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "agree": 3,
+      "votes": 5
+    }
+  ],
+  "contract": "0x59b99946Facc77971d268D390170C917Ad9C4219",
+  "readback": {
+    "criterion": "The post-restart read recovered the pre-restart payload intact. An exact value match or verified matching checksum confirms intact recovery.",
+    "lower_blocks": [
+      [
+        20,
+        50,
+        3,
+        8
+      ],
+      [
+        80,
+        80,
+        3,
+        4
+      ]
+    ],
+    "outcomes": [
+      {
+        "id": "a01",
+        "outcome": "PASS",
+        "score": 20
+      },
+      {
+        "id": "a02",
+        "outcome": "PASS",
+        "score": 20
+      },
+      {
+        "id": "a03",
+        "outcome": "PASS",
+        "score": 20
+      },
+      {
+        "id": "a04",
+        "outcome": "FAIL",
+        "score": 20
+      },
+      {
+        "id": "b01",
+        "outcome": "FAIL",
+        "score": 50
+      },
+      {
+        "id": "b02",
+        "outcome": "FAIL",
+        "score": 50
+      },
+      {
+        "id": "b03",
+        "outcome": "UNKNOWN",
+        "score": 50
+      },
+      {
+        "id": "b04",
+        "outcome": "UNKNOWN",
+        "score": 50
+      },
+      {
+        "id": "c01",
+        "outcome": "PASS",
+        "score": 80
+      },
+      {
+        "id": "c02",
+        "outcome": "PASS",
+        "score": 80
+      },
+      {
+        "id": "c03",
+        "outcome": "PASS",
+        "score": 80
+      },
+      {
+        "id": "c04",
+        "outcome": "FAIL",
+        "score": 80
+      }
+    ],
+    "points": [
+      {
+        "counts": {
+          "FAIL": 1,
+          "PASS": 3,
+          "UNKNOWN": 0
+        },
+        "lower": [
+          3,
+          8
+        ],
+        "score": 20,
+        "upper": [
+          5,
+          8
+        ]
+      },
+      {
+        "counts": {
+          "FAIL": 2,
+          "PASS": 0,
+          "UNKNOWN": 2
+        },
+        "lower": [
+          3,
+          8
+        ],
+        "score": 50,
+        "upper": [
+          5,
+          8
+        ]
+      },
+      {
+        "counts": {
+          "FAIL": 1,
+          "PASS": 3,
+          "UNKNOWN": 0
+        },
+        "lower": [
+          3,
+          4
+        ],
+        "score": 80,
+        "upper": [
+          3,
+          4
+        ]
+      }
+    ],
+    "sha256": "8743965cd24ccfd7f25dfc3d088ed55ec45df129c3391087f6edbe1d0852c38d",
+    "source": "gabrieladash123-bit/calibration-band/295ce396e01b7a80f97ae31d0a7adbef9c208651/fixtures/restoration.json",
+    "upper_blocks": [
+      [
+        20,
+        50,
+        5,
+        8
+      ],
+      [
+        80,
+        80,
+        3,
+        4
+      ]
+    ]
+  }
+}

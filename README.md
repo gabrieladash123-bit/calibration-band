@@ -2,7 +2,7 @@
 
 CalibrationBand publishes a monotone calibration curve for ordered benchmark scores. GenLayer validators independently read a pinned benchmark report and determine which cases demonstrate the required outcome. Unknown outcomes widen the band.
 
-[Contract source](contracts/calibration_band.py) · [Example report](fixtures/restoration.json) · [Direct tests](tests/direct/test_calibration_band.py)
+[Contract source](contracts/calibration_band.py) · [Example report](fixtures/restoration.json) · [StudioNet proof](#studionet-proof) · [Submission text](SUBMISSION.md)
 
 ## Example
 
@@ -35,3 +35,14 @@ python -m pytest tests/direct -q
 ```
 
 The direct tests replay validator disagreement and changed source bytes. An independent min–max implementation checks each partial label vector in a four-case benchmark against every binary completion.
+
+## StudioNet proof
+
+The deployment, benchmark fit, and expected duplicate rejection all finalized with 3 of 5 votes. Replay verifies the deployed source, the twelve recorded outcomes, the pooling blocks, and the lookup results for an observed and an unobserved score.
+
+[Deployed contract](https://explorer-studio.genlayer.com/address/0x59b99946Facc77971d268D390170C917Ad9C4219) · [Proof ledger](proofs/studionet.json) · [GenVM checks](https://github.com/gabrieladash123-bit/calibration-band/actions/runs/45685160406)
+
+```sh
+npm ci
+npm run verify
+```
