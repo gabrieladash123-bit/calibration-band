@@ -1,0 +1,16 @@
+{
+  "cases": [
+    {"id":"a01","score":20,"note":"After restart, a read returned the saved payload byte for byte."},
+    {"id":"a02","score":20,"note":"The service restarted. A read back matched the exact value written before shutdown."},
+    {"id":"a03","score":20,"note":"Post-restart retrieval returned the same bytes that had been written."},
+    {"id":"a04","score":20,"note":"The post-restart read returned a missing-key error for the saved payload."},
+    {"id":"b01","score":50,"note":"The first read after restart returned corrupted bytes in place of the saved payload."},
+    {"id":"b02","score":50,"note":"After restart, verification found the previously saved payload absent."},
+    {"id":"b03","score":50,"note":"The process restarted successfully. The operator recorded no read-back check or result."},
+    {"id":"b04","score":50,"note":"The report ends at restart. It contains no observation about the saved payload afterward."},
+    {"id":"c01","score":80,"note":"A fresh read after restart exactly matched the previously saved payload."},
+    {"id":"c02","score":80,"note":"The payload was read after restart and its bytes matched the original write."},
+    {"id":"c03","score":80,"note":"The post-restart checksum of the retrieved payload matched the original checksum."},
+    {"id":"c04","score":80,"note":"A read after restart returned a different value from the one saved before restart."}
+  ]
+}
